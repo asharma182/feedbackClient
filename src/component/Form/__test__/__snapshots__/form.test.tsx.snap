@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test for snapshot renders correctly when there are no items 1`] = `
+<div
+  className="form-cotainer"
+  style={
+    Object {
+      "backgroundColor": "#f8f9fa",
+      "height": "100%",
+    }
+  }
+>
+  <h5
+    className="modal-title"
+  >
+    Provide us feedback
+  </h5>
+  <div
+    className="modal-body"
+  >
+    <form
+      id="contact-form"
+      method="POST"
+      onSubmit={[Function]}
+    >
+      <div
+        className="form-group"
+      >
+        <label
+          className="label"
+          htmlFor="name"
+        >
+          Name
+        </label>
+        <input
+          className="form-control"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        className="form-group"
+      >
+        <label
+          className="label"
+          htmlFor="age"
+        >
+          Age
+        </label>
+        <input
+          className="form-control"
+          onChange={[Function]}
+          type="text"
+          value={0}
+        />
+      </div>
+      <div
+        className="form-group"
+      >
+        <label
+          className="label"
+          htmlFor="feedback"
+        >
+          Feedback
+        </label>
+        <textarea
+          className="form-control"
+          onChange={[Function]}
+          rows={5}
+          value=""
+        />
+      </div>
+      <div
+        className="form-group"
+      >
+        <button
+          className="btn button btn-primary"
+          type="submit"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+`;

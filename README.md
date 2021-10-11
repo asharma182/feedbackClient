@@ -1,18 +1,19 @@
-# Getting Started with Create React App
+# Feedback React App 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+    This repo contains the code of feedback react app
 
-## Available Scripts
+## Initial Setup
 
-In the project directory, you can run:
+1. Make Sure to check the Latest Version of Node, React,
+2. Install react-native-cli globally on your computer
+    yarn global add react-native-cli
 
-### `yarn start`
+#### Basic Setup(Running React App)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Clone the repo
+2. `yarn install` to fecth the node modules
+3. Open package.json file and update the proxy with the node server host url.
+4. `serve -s build` to run the app
 
 ### `yarn test`
 
