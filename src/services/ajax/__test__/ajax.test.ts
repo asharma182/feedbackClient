@@ -1,30 +1,20 @@
-import {createFeedbackForm} from '../index'
-const axios = require('axios');
+import * as API from '../index'
+import axios from 'axios';
 
 jest.mock('axios');
 
 describe('test createfeedback form ', () => {
-    it('returns the title of the first album', async () => {
-        const data = {        
-            "name": "Jyoti Bala Sharma",
-            "age": 39,
-            "feedback": "Note that the API is entirely asynchronous. To get data back from the server, you"
-        }
-        // axios.get.mockResolvedValue({
-        //     data: [
-        //       {
-        //         userId: 1,
-        //         id: 1,
-        //         title: 'My First Album'
-        //       },
-        //       {
-        //         userId: 1,
-        //         id: 2,
-        //         title: 'Album: The Sequel'
-        //       }
-        //     ]
-        //   });
-        const title = await createFeedbackForm(data);  // Run the function
-        expect(title).toEqual('quidem molestiae enim');  // Make an assertion on the result
+    const mock_response = {
+        "message": "Saved Data"
+    }
+
+    it("returns false if no data is returned by the API", async () => {
+        global.fetch = jest.spyOn(API, 'createFeedbackForm').mockImplementation(() => {
+            return Promise.resolve(new Response(JSON.stringify(mock_response)));
+        });
+        const response = await API.createFeedbackForm();
+        const data =  JSON.parse(response._bodyInit)
+        expect(fetch).toHaveBeenCalledTimes(1);
+        expect(data.message).toBe('Saved Data');
       });
 })
